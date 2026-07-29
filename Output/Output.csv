@@ -1,0 +1,225 @@
+===== ORIGINAL DATASET =====                      
+    ID                                       Conversation
+0    1                               Hi!!! How are you? 😊
+1    2                              I'm doing GREAT!!! 😍😍
+2    3  Visit our website: https://www.example.com for...
+3    4               My email is nandhini1706@gmail.com 📧
+4    5      Meeting tomorrow @ 10:30 AM, don't be late! ⏰
+5    6        Wow!!! This movie was AMAZING 🍿🔥 #MustWatch
+6    7                I can't believe this happened!!! 😭😭
+7    8              Congratulations!!! 🎉🎉 You scored 95%.
+8    9                           Call me at 9876543210 ☎️
+9   10       Follow us @OpenAI and #AI #MachineLearning 🤖
+10  11               <b>Hello</b> Welcome to our website!
+11  12                   The product costs ₹999 only!!! 💰
+12  13                       LOL 😂😂 That's sooo funny!!!!
+13  14                 I'm soooo excited for the trip ✈️🌍
+14  15    Worst experience ever!!! 😡😡 Never buying again.
+15  16              Order ID: ORD12345 has been shipped 🚚
+16  17       Check this video 👉 https://youtu.be/abcd1234
+17  18                Python > Java? 🤔 What do you think?
+18  19            Good Morning!!! 🌞 Have a wonderful day.
+19  20                               Bye!!! Take care ❤️😊
+
+========== DATASET INFORMATION ==========
+<class 'pandas.DataFrame'>
+RangeIndex: 20 entries, 0 to 19
+Data columns (total 2 columns):
+ #   Column        Non-Null Count  Dtype
+---  ------        --------------  -----
+ 0   ID            20 non-null     int64
+ 1   Conversation  20 non-null     str  
+memory usage: 452.0 bytes
+None
+
+========== SHAPE ==========
+(20, 2)
+
+========== COLUMN NAMES ==========
+Index(['ID', 'Conversation'], dtype='str')
+
+========== MISSING VALUES ==========
+ID              0
+Conversation    0
+dtype: int64
+PS D:\Users\Nandhini\Desktop\DATA PREPROCESSING> python preprocessing.py
+[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\Nandhini\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to
+[nltk_data]     C:\Users\Nandhini\AppData\Roaming\nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+[nltk_data] Downloading package wordnet to
+[nltk_data]     C:\Users\Nandhini\AppData\Roaming\nltk_data...
+[nltk_data]   Package wordnet is already up-to-date!
+
+========== ORIGINAL DATASET ==========
+
+    ID                                       Conversation
+0    1                               Hi!!! How are you? 😊
+1    2                              I'm doing GREAT!!! 😍😍
+2    3  Visit our website: https://www.example.com for...
+3    4               My email is nandhini1706@gmail.com 📧
+4    5      Meeting tomorrow @ 10:30 AM, don't be late! ⏰
+5    6        Wow!!! This movie was AMAZING 🍿🔥 #MustWatch
+6    7                I can't believe this happened!!! 😭😭
+7    8              Congratulations!!! 🎉🎉 You scored 95%.
+8    9                           Call me at 9876543210 ☎️
+9   10       Follow us @OpenAI and #AI #MachineLearning 🤖
+10  11               <b>Hello</b> Welcome to our website!
+11  12                   The product costs ₹999 only!!! 💰
+12  13                       LOL 😂😂 That's sooo funny!!!!
+13  14                 I'm soooo excited for the trip ✈️🌍
+14  15    Worst experience ever!!! 😡😡 Never buying again.
+15  16              Order ID: ORD12345 has been shipped 🚚
+16  17       Check this video 👉 https://youtu.be/abcd1234
+17  18                Python > Java? 🤔 What do you think?
+18  19            Good Morning!!! 🌞 Have a wonderful day.
+19  20                               Bye!!! Take care ❤️😊
+
+========== DATASET INFORMATION ==========
+<class 'pandas.DataFrame'>
+RangeIndex: 20 entries, 0 to 19
+Data columns (total 2 columns):
+ #   Column        Non-Null Count  Dtype
+---  ------        --------------  -----
+ 0   ID            20 non-null     int64
+ 1   Conversation  20 non-null     str  
+dtypes: int64(1), str(1)
+memory usage: 452.0 bytes
+None
+
+========== SHAPE ==========
+(20, 2)
+
+========== COLUMN NAMES ==========
+Index(['ID', 'Conversation'], dtype='str')
+
+========== MISSING VALUES ==========
+ID              0
+Conversation    0
+dtype: int64
+
+========== LOWERCASE ==========
+
+    ID                                       Conversation
+0    1                               hi!!! how are you? 😊
+1    2                              i'm doing great!!! 😍😍
+2    3  visit our website: https://www.example.com for...
+3    4               my email is nandhini1706@gmail.com 📧
+4    5      meeting tomorrow @ 10:30 am, don't be late! ⏰
+5    6        wow!!! this movie was amazing 🍿🔥 #mustwatch
+6    7                i can't believe this happened!!! 😭😭
+7    8              congratulations!!! 🎉🎉 you scored 95%.
+8    9                           call me at 9876543210 ☎️
+9   10       follow us @openai and #ai #machinelearning 🤖
+10  11               <b>hello</b> welcome to our website!
+11  12                   the product costs ₹999 only!!! 💰
+12  13                       lol 😂😂 that's sooo funny!!!!
+13  14                 i'm soooo excited for the trip ✈️🌍
+14  15    worst experience ever!!! 😡😡 never buying again.
+15  16              order id: ord12345 has been shipped 🚚
+16  17       check this video 👉 https://youtu.be/abcd1234
+17  18                python > java? 🤔 what do you think?
+18  19            good morning!!! 🌞 have a wonderful day.
+19  20                               bye!!! take care ❤️😊
+
+========== re.search() ==========
+URL Found : visit our website: https://www.example.com for more details.
+
+========== re.findall() ==========
+Numbers Found : ['95']
+
+========== re.split() ==========
+['hi!!!', 'how', 'are', 'you?', '😊']
+
+========== CLEANED DATA ==========
+
+    ID  ...                        Clean_Conversation
+0    1  ...                            hi how are you
+1    2  ...                            im doing great
+2    3  ...        visit our website for more details
+3    4  ...                               my email is
+4    5  ...          meeting tomorrow am dont be late
+5    6  ...      wow this movie was amazing mustwatch
+6    7  ...              i cant believe this happened
+7    8  ...                congratulations you scored
+8    9  ...                                call me at
+9   10  ...          follow us and ai machinelearning
+10  11  ...              hello welcome to our website
+11  12  ...                    the product costs only
+12  13  ...                      lol thats sooo funny
+13  14  ...             im soooo excited for the trip
+14  15  ...  worst experience ever never buying again
+15  16  ...             order id ord has been shipped
+16  17  ...                          check this video
+17  18  ...             python java what do you think
+18  19  ...         good morning have a wonderful day
+19  20  ...                             bye take care
+
+[20 rows x 3 columns]
+
+✅ Cleaned dataset saved successfully in output/clean.csv
+
+========== BEFORE & AFTER ==========
+
+Original : hi!!! how are you? 😊
+Cleaned  : hi how are you
+------------------------------------------------------------
+Original : i'm doing great!!! 😍😍
+Cleaned  : im doing great
+------------------------------------------------------------
+Original : visit our website: https://www.example.com for more details.
+Cleaned  : visit our website for more details
+------------------------------------------------------------
+Original : my email is nandhini1706@gmail.com 📧
+Cleaned  : my email is
+------------------------------------------------------------
+Original : meeting tomorrow @ 10:30 am, don't be late! ⏰
+Cleaned  : meeting tomorrow am dont be late
+------------------------------------------------------------
+Original : wow!!! this movie was amazing 🍿🔥 #mustwatch
+Cleaned  : wow this movie was amazing mustwatch
+------------------------------------------------------------
+Original : i can't believe this happened!!! 😭😭
+Cleaned  : i cant believe this happened
+------------------------------------------------------------
+Original : congratulations!!! 🎉🎉 you scored 95%.
+Cleaned  : congratulations you scored
+------------------------------------------------------------
+Original : call me at 9876543210 ☎️
+Cleaned  : call me at
+------------------------------------------------------------
+Original : follow us @openai and #ai #machinelearning 🤖
+Cleaned  : follow us and ai machinelearning
+------------------------------------------------------------
+Original : <b>hello</b> welcome to our website!
+Cleaned  : hello welcome to our website
+------------------------------------------------------------
+Original : the product costs ₹999 only!!! 💰
+Cleaned  : the product costs only
+------------------------------------------------------------
+Original : lol 😂😂 that's sooo funny!!!!
+Cleaned  : lol thats sooo funny
+------------------------------------------------------------
+Original : i'm soooo excited for the trip ✈️🌍
+Cleaned  : im soooo excited for the trip
+------------------------------------------------------------
+Original : worst experience ever!!! 😡😡 never buying again.
+Cleaned  : worst experience ever never buying again
+------------------------------------------------------------
+Original : order id: ord12345 has been shipped 🚚
+Cleaned  : order id ord has been shipped
+------------------------------------------------------------
+Original : check this video 👉 https://youtu.be/abcd1234
+Cleaned  : check this video
+------------------------------------------------------------
+Original : python > java? 🤔 what do you think?
+Cleaned  : python java what do you think
+------------------------------------------------------------
+Original : good morning!!! 🌞 have a wonderful day.
+Cleaned  : good morning have a wonderful day
+------------------------------------------------------------
+Original : bye!!! take care ❤️😊
+Cleaned  : bye take care
+------------------------------------------------------------
