@@ -1,4 +1,4 @@
-# 🧹 Text Data Cleaning using Pandas, Regex (re), and NLTK
+#  Text Data Cleaning using Pandas, Regex (re), and NLTK
 
 ## 📌 Project Overview
 
